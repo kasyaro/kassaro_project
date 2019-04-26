@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel="stylesheet" href="/css/main.css">
+        <meta charset="utf-8">
+        <title>trips</title>
+    </head>
+    <!-- this page setting up css style , wrapping up our seed.js data. -->
+    <body>
+        <nav>
+            <!-- this connect us to a create page => create route. http://localhost:3000/desteny/trips -->
+            <a href="/desteny/new">Add Your Trip</a>
+        </nav>
+        <header>
+        <h1>Travel the world</h1>
+    </header>
+        <div class='container'> 
+            <% for(let i = 0; i < trip.length; i++){ %>
+                <div class='card'>
+                    <h2> <%=trip[i].name; %></h2> </br>
+                     <p> <%=trip[i].description; %> </p></br>
+                     <a href="/trips/<%= trip[i].id; %>"><img src="<%=trip[i].img;%>"></a></br>
+                     <h2> $ <%=trip[i].price; %> </h2> </br>
+
+                            <!-- EDIT LINK -->
+                     <a href="/trips/<%=trip[i].id; %>/edit">Edit</a>
+                     
+                     <!--  ADD DELETE FORM HERE-->
+                    <form action="/trips/<%=trip[i].id; %>?_method=DELETE" method="POST">
+                     <input type="submit" value="DELETE"/>
+                    </form>
+                </div>
+            <% } %>
+            </div>
+    </body>
+</html>
+

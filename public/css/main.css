@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+      justify-content: center; 
+   border: gray solid 1px;
+   flex-wrap: wrap;
+   }
+   .card {
+       background-color:beige;
+      display: flex; 
+      flex-direction: column;
+      border: solid white 3px;
+      padding: 1em;
+      align-items: center;
+      /* width: 25%; */
+   }
+   h1 {
+       color: gray
+   }
+   h2 {
+       color: brown 
+   }
+   header {
+       text-align: center;
+       background-color: ivory;
+       height: 50px;
+       border: solid gray 1 px;
+   }
+   a {
+       text-decoration: none;
+       color: gray
+   }
+  
+.img {
+    background-image: url('https://www.beyondpesticides.org/assets/media/images/wildlife/images/chincoteaguebirds_000.jpg');
+    background-repeat: no-repeat;
+    
+   }
+   .img > h2 {
+       
+       padding-top: 295px;
+   }
+   h2 > a {
+       color: gainsboro;
+   }
+   footer {
+    border: solid gray 1 px;
+    background-color: beige;
+    text-align: center;
+   }
