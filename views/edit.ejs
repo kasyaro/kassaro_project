@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel="stylesheet" href="/css/main.css">
+        <meta charset="utf-8">
+        <title>update trip</title>
+    </head>
+    <body>
+        <div class="container">
+                <h1>desirable travel destination</h1>
+        
+        <form class='card' action="/desteny/<%=travelnew.id %>?_method=PUT" method="POST">
+            <label for="name">Name </label>
+             <input type="text" name="name" id="name"/><br/>
+             <label for="description">description</label>
+          <input type="text" name="description" id="description"/><br/>
+        <label for="img">Image URL</label>
+        <input type="img" name="img">
+            <label for="price">Expected price</label>
+            <input type="number" name="price" id="price" /><br/>
+            <input type="submit" name="" value="new trip"/>
+        </form>
+</div>
+    </body>
+</html>

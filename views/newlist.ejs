@@ -1,26 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
             <link rel="stylesheet" href="/css/main.css">
-        <meta charset="utf-8">
+       
         <title>new destination</title>
     </head>
     <body>
-        <div class="container">
+        <a href="/desteny/trips"> back to Trips page</a>
+        <div class="parent">
                 <h1>desirable travel destinations</h1>
-        
-        <ul class='card' >
-                <li> <%=trip.name; %></li> 
-                <li> <%=trip.description; %></li> 
-                <li> <%=trip.price; %></li> 
-        </ul>
-         <!-- EDIT LINK -->
-         <a href="/trips/<%=trip.id; %>/edit">Edit</a>
-                     
-         <!--  ADD DELETE FORM HERE-->
-        <form action="/trips/<%=trip.id; %>?_method=DELETE" method="POST">
-         <input type="submit" value="DELETE"/>
-        </form>
+                <% for(let j = 0; j < tripnew.length; j++){ %>
+        <ul class='child' >
+                <li> <h2> <%=tripnew[j].name; %></h2></li> 
+                <li> <%=tripnew[j].description; %></li> 
+                <li>  
+                    <img src="<%=tripnew[j].img;%>" alt="picture" height="auto" width="450">
+                </li>
+                <li> $ <%=tripnew[j].price; %></li> 
+
+                <div class="btn-group">
+                <!-- EDIT LINK -->
+                 <a  class="btn btn-success" 
+                href="/desteny/newlist/<%=tripnew[j].id;%>/edit"> EDIT </a> 
+               
+                <!--  ADD DELETE FORM HERE-->
+                <form  action="/desteny/newlist/<%=tripnew[j].id; %>?_method=DELETE" method="POST">
+                    <input class="btn btn-secondary btn-sm" type="submit" value="DELETE"/>
+                </form>
+            </div>
+
+            </ul>
+            <%}%>
 </div>
+
     </body>
 </html>

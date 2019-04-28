@@ -18,7 +18,7 @@ router.get('/trips', (req, res) => {
 router.get('/newlist', (req, res) => {
     travel.find({}, (error, newTrips)=>{
         res.render('newlist.ejs', {
-            trip: newTrips
+            tripnew: newTrips
         });
     })
 })
@@ -28,6 +28,9 @@ router.get('/newlist', (req, res) => {
 router.get('/new', (req, res) => {
     res.render('new.ejs')
 })
+
+
+
 // CREATE (SERVER)
 router.post('/newlist', (req, res) => {
     //created new travel(model) in db.
@@ -49,6 +52,37 @@ router.get('/desteny/show/:id', (req,res) => {
         })
     })
     })
-    
+
+
+//**DELETE */
+router.delete('/newlist/:id', (req, res)=>{
+    travel.findByIdAndRemove(req.params.id,(err, deletedTravel)=> {
+        res.redirect('/desteny/newlist')
+    })
+});
+
+
+    //***EDIT  */
+router.get('/newlist/:id/edit', (req,res)=> {
+    travel.findById(req.params.id, (err, foundTrip)=> {
+
+        res.render('edit.ejs', {
+travelnew:foundTrip
+        })
+    })
+})
+ //****EDIT route PUT */   
+router.put('/newlist/:id', (res,req)=> {
+  travel.findByIdAndUpdate(req.params.id, req.body, {new: true},(err, updateTrip) => {
+      if(err) {
+          res.send(err)
+      } else{
+res.redirect('/newlist')
+      }
+  })  
+})
+
+
+
 
 module.exports = router
