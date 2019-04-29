@@ -72,17 +72,16 @@ travelnew:foundTrip
     })
 })
  //****EDIT route PUT */   
-router.put('/newlist/:id', (res,req)=> {
+router.put('/newlist/:id', (req,res)=> {
+    // console.log(req.params.id)
+    // req.body.price = parseInt(req.body.price)
   travel.findByIdAndUpdate(req.params.id, req.body, {new: true},(err, updateTrip) => {
       if(err) {
           res.send(err)
       } else{
-res.redirect('/newlist')
+res.redirect('/desteny/newlist')
       }
   })  
 })
-
-
-
 
 module.exports = router

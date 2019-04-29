@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <!-- Bootstrap CSS -->
+                        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
             <link rel="stylesheet" href="/css/main.css">
         <meta charset="utf-8">
         <title>update trip</title>
@@ -9,15 +12,28 @@
         <div class="container">
                 <h1>desirable travel destination</h1>
         
-        <form class='card' action="/desteny/<%=travelnew.id %>?_method=PUT" method="POST">
-            <label for="name">Name </label>
-             <input type="text" name="name" id="name"/><br/>
-             <label for="description">description</label>
-          <input type="text" name="description" id="description"/><br/>
+        <form class='form-group' action="/desteny/newlist/<%=travelnew.id %>?_method=PUT" method="POST">
+
+            <label for="name">Destination target</label>
+             <input type="text" class="form-control" name="name" value="<%=travelnew.name;%>"/><br/>
+
+             <label for="description">point of interests</label>
+          <textarea type="text" class="form-control" name="description" value="<%=travelnew.description;%>"></textarea><br/>
+
         <label for="img">Image URL</label>
-        <input type="img" name="img">
+        <input type="text" class="form-control" name="img" value="<%=travelnew.img%>"/>
+
             <label for="price">Expected price</label>
-            <input type="number" name="price" id="price" /><br/>
+            <select type="text" class="form-control" name="price" value="<%=travelnew.price%>"> 
+                <option >1800 - 2600</option>
+                <option >2600 - 3200</option>
+                <option >3200 - 4100</option>
+                <option >4100 - 5200</option>
+                <option >5200 - 6300</option>
+                <option >6300 - 7800 </option>
+                
+            </select><br/>
+            
             <input type="submit" name="" value="new trip"/>
         </form>
 </div>
