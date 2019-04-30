@@ -67,11 +67,11 @@ app.get('/' , (req, res) => {
 //**add seed data to db */
 // once we went to localhost:3000/seed in abroweser it adds seed data ;
 // than we commentit this function.
-app.get('/seed', (req, res) => {
-    travel.create(newTrips, (err, seedItems)=> {
-        res.send(seedItems)
-    })
-})
+// app.get('/seed', (req, res) => {
+//     travel.create(newTrips, (err, seedItems)=> {
+//         res.send(seedItems)
+//     })
+// })
 //**remark => if we need to replace db => we can do it it directly in terminal:1.type=>'mongo'; 2.'show dbs'; 3.'use "collection name" '; 4. 'db.dropDatabase()'; 5. after we back to seed.js and correct data ; 6. run function to add seed data again (make sure only one time , so not to seed data second round) */
 //********************** */
 //___________________
