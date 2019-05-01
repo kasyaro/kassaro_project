@@ -10,7 +10,7 @@ body {
    flex-wrap: wrap;
    }
    .card {
-       background-color: white;
+       background-color: lavenderblush;
       display: flex;
       flex-direction: column;
       border: solid white 3px;
@@ -32,7 +32,7 @@ justify-content: space-around;
        
    }
    h1 { padding: .1em 0em;
-       color: white;
+       color: lavenderblush;
        text-align: center;
        font-family: 'Lemonada'
    }
@@ -50,7 +50,7 @@ justify-content: space-around;
    header {
        /* text-align: center; */
        background: url('https://image.freepik.com/free-photo/blue-water-surface-swimming-pool-background_3236-1365.jpg');
-       height: 60px;
+       height: 100px;
        
    }
    a { margin : 1em;
@@ -73,13 +73,10 @@ nav >h2 {
   opacity: 0;
   padding-top: 25%;
 }
-/* 
-h2 > a {
-  color: white;
-} */
+
    a:hover {
     text-decoration: none;
-    color: darkturquoise;
+    color: lavenderblush;
   }
   footer > a {
     color: white;
@@ -87,6 +84,10 @@ h2 > a {
   }
   .submit {
     background-color: darkturquoise;
+  }
+  form {
+    color: rgb(111, 9, 43);
+    font-family: 'Lemonada';
   }
 label {
   font-family: 'Lemonada';
@@ -96,18 +97,16 @@ label {
    .parent {
     width: 60%;
     background: url('https://image.freepik.com/free-photo/blue-water-surface-swimming-pool-background_3236-1365.jpg');
-    /* background-color: darkseagreen; */
     border: 5px solid white;
-    /* float: left; */
-    font-family: 'Lemonada'
+    font-family: 'Lemonada';
+
   }
   
   .child {
     width: 90%;
     padding: 20%;
-    /* border: 4px solid rgb(111, 9, 43); */
     margin: .5em auto;
-    background-color: white
+    background-color: white 
   }
   
   .btn-group {
@@ -116,41 +115,38 @@ label {
   }
   /* // Small devices (landscape phones, 576px and up) */
   @media (max-width: 576px) {  
-    /* h1 {
-    font-size: 20px;
-  }  */
+   
   html {
     font-size: 1rem;
   }
+  header{
+    height: 60px;
+  }
 }
-  
   /* // Medium devices (tablets, 768px and up) */
   @media (min-width: 768px) { 
-    /* h1 {
-      font-size: 25px;
-    } */
+    
     html {
       font-size: 1.2rem;
+    }
+    header{
+      height: 80px;
     }
   }
   
   /* // Large devices (desktops, 992px and up) */
   @media (min-width: 992px) {
-    /* h1 {
-      font-size: 35px;
-    } */
+    
     html {
       font-size: 1.4rem;
+    }
+    header{
+      height: 90px;
     }
      }
   /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-  /* h1 {
-    font-size: 45px;
-  }
-  header { 
-     height: 80px;
-  } */
+  
   html {
     font-size: 1.6rem;
   }

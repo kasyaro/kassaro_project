@@ -12,8 +12,10 @@
     <body>
         <a  class='line' href="/desteny/trips"> BACK TO TRAVELS PAGE</a>
         <div class='container'> 
-        <div class="parent">
-                <h1>desirable travel destinations</h1>
+            <div class="parent">
+               
+                <h1> future travel's list</h1>
+           
                 <% for(let j = 0; j < tripnew.length; j++){ %>
         <ul class='child' >
                 <li> <h2> <%=tripnew[j].name; %></h2></li> 
@@ -25,7 +27,7 @@
 
                 <div class="btn-group">
                 <!-- EDIT LINK -->
-                 <a  class="btn btn-success" 
+                 <a  class="btn btn-warning" 
                 href="/desteny/newlist/<%=tripnew[j].id;%>/edit"> EDIT </a> 
                
                 <!--  ADD DELETE FORM HERE-->
