@@ -4,8 +4,8 @@ body {
 
 .container {
     display: flex;
-    /* background-color: darkseagreen; */
-    background-color: hsl(46, 100%, 50%);
+    
+     background-color:rgba(255, 167, 2, 0.762);
       justify-content: space-evenly; 
    flex-wrap: wrap;
    }
@@ -18,6 +18,13 @@ body {
       align-items: center;
 justify-content: space-around;
       
+   }
+   .new {
+     background: url('https://i0.wp.com/gary-randall.com/wp-content/uploads/2018/08/GAR7882-2.jpg?zoom=2&fit=2048%2C1367&ssl=1') no-repeat center;
+   }
+   .variant {
+     padding: 0em;
+     background: url('https://image.freepik.com/free-photo/blue-water-surface-swimming-pool-background_3236-1365.jpg') no-repeat center
    }
    p {
        width: 450px;
@@ -32,15 +39,23 @@ justify-content: space-around;
    h2 { text-align: center;
        color: rgb(111, 9, 43); 
    }
+   .line {
+     background-color: gray;
+     padding: 0px;
+     margin: 0px;
+    }
+  li {
+    margin: .7em 0em;
+  }
    header {
        /* text-align: center; */
-       background-color: rgb( darkseagreen);
+       background: url('https://image.freepik.com/free-photo/blue-water-surface-swimming-pool-background_3236-1365.jpg');
        height: 60px;
        
    }
    a { margin : 1em;
        text-decoration: none;
-       color: gray
+       color: white;
    }
   h1 > a {
     color: white
@@ -58,31 +73,39 @@ nav >h2 {
   opacity: 0;
   padding-top: 25%;
 }
+/* 
 h2 > a {
   color: white;
-}
+} */
    a:hover {
     text-decoration: none;
-    color: rgb(109, 3, 91);
+    color: darkturquoise;
   }
   footer > a {
     color: white;
     text-align: center;
   }
-  
-
+  .submit {
+    background-color: darkturquoise;
+  }
+label {
+  font-family: 'Lemonada';
+  color:  rgb(111, 9, 43);
+}
    /* bootstrap properties*/
    .parent {
     width: 60%;
-    background-color: darkseagreen;
-    border: 5px solid gray;
+    background: url('https://image.freepik.com/free-photo/blue-water-surface-swimming-pool-background_3236-1365.jpg');
+    /* background-color: darkseagreen; */
+    border: 5px solid white;
     /* float: left; */
+    font-family: 'Lemonada'
   }
   
   .child {
     width: 90%;
     padding: 20%;
-    border: 4px solid rgb(173, 171, 171);
+    /* border: 4px solid rgb(111, 9, 43); */
     margin: .5em auto;
     background-color: white
   }
@@ -93,33 +116,43 @@ h2 > a {
   }
   /* // Small devices (landscape phones, 576px and up) */
   @media (max-width: 576px) {  
-    h1 {
+    /* h1 {
     font-size: 20px;
-  } 
+  }  */
+  html {
+    font-size: 1rem;
+  }
 }
   
   /* // Medium devices (tablets, 768px and up) */
   @media (min-width: 768px) { 
-    h1 {
+    /* h1 {
       font-size: 25px;
+    } */
+    html {
+      font-size: 1.2rem;
     }
-    
   }
   
   /* // Large devices (desktops, 992px and up) */
   @media (min-width: 992px) {
-    h1 {
+    /* h1 {
       font-size: 35px;
+    } */
+    html {
+      font-size: 1.4rem;
     }
-    
      }
   /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-  h1 {
+  /* h1 {
     font-size: 45px;
   }
   header { 
      height: 80px;
+  } */
+  html {
+    font-size: 1.6rem;
   }
  }
   

@@ -3,17 +3,18 @@
     <head>
             <link rel="stylesheet" href="/css/main.css">
         <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Lemonada" rel="stylesheet">
         <title>new destination</title>
     </head>
     <body>
         <div class="container">
-                <h1>desirable travel destination</h1>
+                <!-- <h1 class='card'><p class='line'>desirable travel destination</p></h1> -->
         
-        <form class='card' action="/desteny/newlist" method="POST">
+        <form class='card variant' action="/desteny/newlist" method="POST">
             Name: <input type="text" name="name" id="name"/><br/>
             description: <input type="text" name="description" id="description"/><br/>
             price: <input type="number" name="price" id="price" /><br/>
-            <input type="submit" name="" value="request trip"/>
+            <input class='submit' type="submit" name="" value="request trip"/>
         </form>
 </div>
     </body>
