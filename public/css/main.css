@@ -106,12 +106,16 @@ label {
     width: 90%;
     padding: 20%;
     margin: .5em auto;
-    background-color: white 
+    background-color: lavenderblush; 
   }
   
-  .btn-group {
-  align-items: baseline;
-  margin: 1em 0em 0em .3em;
+  /* .group {
+    display: inline-block;
+  align-items: baseline; 
+   margin: 1em 0em 0em .3em; 
+  }*/
+  .btn-warning{
+    margin: 0em 4em;
   }
   /* // Small devices (landscape phones, 576px and up) */
   @media (max-width: 576px) {  

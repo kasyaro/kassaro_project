@@ -25,17 +25,18 @@
                 </li>
                 <li> $ <%=tripnew[j].price; %></li> 
 
-                <div class="btn-group">
+               <div class='card press'>
                 <!-- EDIT LINK -->
-                 <a  class="btn btn-warning" 
+                 <a  class="btn btn-secondary btn-sm btn-warning" 
                 href="/desteny/newlist/<%=tripnew[j].id;%>/edit"> EDIT </a> 
-               
+            </div>
+               <div class='card press'>
                 <!--  ADD DELETE FORM HERE-->
                 <form  action="/desteny/newlist/<%=tripnew[j].id; %>?_method=DELETE" method="POST">
                     <input class="btn btn-secondary btn-sm" type="submit" value="DELETE"/>
                 </form>
+            
             </div>
-
             </ul>
             <%}%>
 </div>
